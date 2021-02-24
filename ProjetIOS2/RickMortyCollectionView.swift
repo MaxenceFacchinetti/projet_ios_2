@@ -16,21 +16,7 @@ class RickMortyCollectionView: UICollectionView {
         // Drawing code
     }
     */
-    
-    override func numberOfItems(inSection section: Int) -> Int {
-        return 5
-    }
-    
-    
-    override func cellForItem(at indexPath: IndexPath) -> RickMortyCollectionViewCell? {
-        let cell = self.dequeueReusableCell(withReuseIdentifier: "RickMortyCel", for: indexPath) as! RickMortyCollectionViewCell
-        
-        cell.nom.text = "machin"
-        cell.type.text = "truc"
-        
-        
-        return cell
-    }
+
     
 
 }

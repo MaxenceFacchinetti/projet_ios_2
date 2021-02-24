@@ -7,50 +7,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    enum Section{
-        case LIGNE
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(testCell[indexPath.row])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RickMortyCell", for: indexPath) as! RickMortyCollectionViewCell
+        
+        cell.nom.text = testCell[indexPath.row]
+        cell.type.text = "truc"
+        
+        
+        return cell
+    }
+    
+    var testCell: [String] = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o"]
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: RickMortyCollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView.collectionViewLayout = createLayout()
+
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
         // Do any additional setup after loading the view.
     }
     
-    private func createLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewCompositionalLayout(sectionProvider: { (section, environment) -> NSCollectionLayoutSection? in
-            let snapshot = self.diffableDataSource.snapshot()
-            let currentSection = snapshot.sectionIdentifiers[section]
-            
-            switch currentSection {
-            case .LIGNE:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                      heightDimension: .fractionalHeight(1.0))
-
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                       heightDimension: .absolute(50))
-
-                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize,
-                                                             subitem: item,
-                                                             count: 2)
-
-                let section = NSCollectionLayoutSection(group: group)
-                section.interGroupSpacing = 10
-
-                return section
-            }
-        })
-
-        return layout
-    }
+    
     
     
 

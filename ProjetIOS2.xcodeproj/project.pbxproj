@@ -13,6 +13,8 @@
 		08B0756025E692A4005FA936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B0755E25E692A4005FA936 /* Main.storyboard */; };
 		08B0756225E692A5005FA936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B0756125E692A5005FA936 /* Assets.xcassets */; };
 		08B0756525E692A5005FA936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B0756325E692A5005FA936 /* LaunchScreen.storyboard */; };
+		08B0756E25E69C57005FA936 /* RickMortyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B0756D25E69C57005FA936 /* RickMortyCollectionViewCell.swift */; };
+		08B0757125E69CF6005FA936 /* RickMortyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B0757025E69CF6005FA936 /* RickMortyCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		08B0756125E692A5005FA936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08B0756425E692A5005FA936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08B0756625E692A5005FA936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08B0756D25E69C57005FA936 /* RickMortyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyCollectionViewCell.swift; sourceTree = "<group>"; };
+		08B0757025E69CF6005FA936 /* RickMortyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				08B0756125E692A5005FA936 /* Assets.xcassets */,
 				08B0756325E692A5005FA936 /* LaunchScreen.storyboard */,
 				08B0756625E692A5005FA936 /* Info.plist */,
+				08B0756D25E69C57005FA936 /* RickMortyCollectionViewCell.swift */,
+				08B0757025E69CF6005FA936 /* RickMortyCollectionView.swift */,
 			);
 			path = ProjetIOS2;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B0757125E69CF6005FA936 /* RickMortyCollectionView.swift in Sources */,
 				08B0755D25E692A4005FA936 /* ViewController.swift in Sources */,
+				08B0756E25E69C57005FA936 /* RickMortyCollectionViewCell.swift in Sources */,
 				08B0755925E692A4005FA936 /* AppDelegate.swift in Sources */,
 				08B0755B25E692A4005FA936 /* SceneDelegate.swift in Sources */,
 			);

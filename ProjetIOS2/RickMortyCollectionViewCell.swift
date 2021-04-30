@@ -10,6 +10,8 @@ import UIKit
 class RickMortyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nom: UILabel!
-    @IBOutlet weak var type: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    
+    
     
 }
